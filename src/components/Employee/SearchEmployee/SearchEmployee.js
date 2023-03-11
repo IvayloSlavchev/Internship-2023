@@ -8,13 +8,15 @@ const SearchEmployee = () => {
     const employeesCollectionRef = collection(db, "employees");
     const [providedEmployeeId, setProvidedEmployeeId] = useState('');
     const [isSearchButtonClicked, setIsSearchButtonClicked] = useState(false);
+    const [visibleEmployeeId, setVisibleEmployeeId] = useState(false);
 
     const searchEmployeeById = async () => {
         try {
             const data = await getDocs(employeesCollectionRef);
             data.docs.map(item => {
                 if (item.id == providedEmployeeId) {
-                    setEmployees([item.data()])
+                    setEmployees([item.data()]);
+                    setVisibleEmployeeId(false);
                 } 
             })
 
@@ -26,6 +28,7 @@ const SearchEmployee = () => {
     const showAllEmployeesFunction = async () => {
         const employeeData = await getDocs(employeesCollectionRef);
         setEmployees(employeeData.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        setVisibleEmployeeId(true);
         setIsSearchButtonClicked(true);
     }
 
@@ -45,6 +48,7 @@ const SearchEmployee = () => {
                 {
                     employees.length > 0 ? isSearchButtonClicked ? <table className='data-table'>
                         <tr>
+                            { !visibleEmployeeId ? <th /> : <th className='table-name'>Employee Id</th> }
                             <th className='table-name'>Full Name</th>
                             <th className='table-name'>Email</th>
                             <th className='table-name'>Phone Number</th>
@@ -56,6 +60,7 @@ const SearchEmployee = () => {
                                 if (item) {
 
                                     return <tr key={index} className='fetched-data'>
+                                        { !visibleEmployeeId ? <td /> :  <td className='table-data'>{item.id}</td> }
                                         <td className='table-data'>{item.fullName}</td>
                                         <td className='table-data'>{item.email}</td>
                                         <td className='table-data'>{item.phoneNumber}</td>

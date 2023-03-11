@@ -9,12 +9,14 @@ const SearchTask = () => {
     const [tasks, setTasks] = useState([]);
     const [providedTaskId, setProvidedTaskId] = useState('');
     const [isSearchButtonClicked, setIsSearchButtonClicked] = useState(false);
+    const [taskIdVisible, setTaskIdVisible] = useState(false);
 
     const displayTaskById = async () => {
         const getTasksData = await getDocs(taskCollectionRef);
         getTasksData.docs.map(item => {
             if(item.id == providedTaskId) {
                 setTasks([item.data()]);
+                setTaskIdVisible(false);
             }
         })
         setIsSearchButtonClicked(true)
@@ -23,6 +25,7 @@ const SearchTask = () => {
     const displayAllTasks = async () => {
         const taskData = await getDocs(taskCollectionRef);
         setTasks(taskData.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        setTaskIdVisible(true);
         setIsSearchButtonClicked(true);
     }
 
@@ -41,6 +44,7 @@ const SearchTask = () => {
                 {
                    tasks.length > 0 ? isSearchButtonClicked ? <table className='data-table'>
                    <tr>
+                       { !taskIdVisible ? <th /> : <th className='table-name'>Task id</th> }
                        <th className='table-name'>Title</th>
                        <th className='table-name'>Description</th>
                        <th className='table-name'>Assignee</th>
@@ -51,6 +55,7 @@ const SearchTask = () => {
                            if (item) {
 
                                return <tr key={index} className='fetched-data'>
+                                   { !taskIdVisible ? <td /> : <td className='table-data'>{item.id}</td> }
                                    <td className='table-data'>{item.taskTitle}</td>
                                    <td className='table-data'>{item.taskDescription}</td>
                                    <td className='table-data'>{item.assignee}</td>
