@@ -1,13 +1,9 @@
-import { useEffect, useState } from 'react'
 import { UserAuth } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom';
 import "./UserAccount.scss";
 
 
 const UserAccount = () => {
-    const [defaultInformation, setDefaultInformation] = useState('');
-    const [isInformationProvided, setIsInformationProvided] = useState(false);
-
     const { user, logout } = UserAuth();
     const navigate = useNavigate();
 
