@@ -7,6 +7,7 @@ jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
+    env: ${{ REACT_APP_FIREBASE_APIKEY }}
     steps:
       - uses: actions/checkout@v3
       - run: CI=false && npm i && npm run build
