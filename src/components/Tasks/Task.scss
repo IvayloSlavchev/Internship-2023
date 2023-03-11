@@ -38,3 +38,29 @@
         }
     }
 }
+.mobile-version {
+    display: block;
+
+    .task-operations{
+
+        .task-operation-buttons{
+            display: block;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1rem;
+            padding: .5rem;
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+
+            background: linear-gradient(to left, white 50%, lightblue 50%) right;
+            transition: .4s;
+            background-size: 200%;
+        }
+        .task-operation-buttons:hover{
+            background-position: left;
+
+        }
+    }
+}

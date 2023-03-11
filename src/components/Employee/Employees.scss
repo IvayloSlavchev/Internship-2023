@@ -43,12 +43,37 @@
 }
 
 
-/* Styles for mobile/tablet version */
-
 .mobile-view {
     display: block;
-    
+    margin-top: 1rem;
     .employee-left-image  {
         text-align: center;
+
+        .employee-image{
+            max-width: 420px;
+        }
+    }
+
+    .operation-buttons{
+        .employee-operation-button {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 1.3rem;
+            width: 50%;
+            margin-top: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: .5rem;
+
+            background: linear-gradient(to left, white 50%, lightblue 50%) right;
+            transition: .4s;
+            background-size: 200%;
+        }
+
+        .employee-operation-button:hover{
+            background-position: left;
+        }
     }
 }

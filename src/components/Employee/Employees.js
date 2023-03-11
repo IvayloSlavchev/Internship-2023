@@ -19,9 +19,9 @@ const Employees = () => {
     }, [])
 
     return (
-        <div className={ windowSize.width < 900 ? 'mobile-view' : 'employees-main-page' }>
+        <div className={ windowSize.width < 1200 ? 'mobile-view' : 'employees-main-page' }>
             <div className='employee-left-image'>
-                <img src={image} alt="Employees image" />
+                <img src={image} alt="Employees image" className='employee-image' />
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint possimus laborum voluptates, dolor voluptatem odit sit explicabo quis doloremque aut.</p>
             </div>
             <div className='operation-buttons'>
