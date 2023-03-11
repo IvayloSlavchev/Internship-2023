@@ -1,0 +1,40 @@
+.tasks-main-page {
+
+    display: flex;
+    justify-content: space-around;
+
+    .task-image-and-paragraph {
+        width: 40%;
+        margin-top: 3rem;
+        
+        text-align: center;
+    }
+
+    .task-operations {
+        
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 30%;
+        text-align: center;        
+
+        .task-operation-buttons {
+            display: block;
+            margin-top: 3rem;
+            text-decoration: none;
+            color: black;
+            font-size: 1.4rem;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 100%;
+
+            background: linear-gradient(to left, white 50%, lightblue 50%) right;
+            transition: .4s;
+            background-size: 200%;
+        }
+        .task-operation-buttons:hover{
+            color: white;
+            background-position: left;
+        }
+    }
+}

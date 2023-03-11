@@ -1,0 +1,16 @@
+.top-five-main-component {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+
+    .fetched-data {
+        display: flex;
+        justify-content: space-around;
+
+        .top-five-employees {
+            .done-tasks {
+                text-align: center;
+            }
+        }
+    }
+}

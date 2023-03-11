@@ -1,0 +1,39 @@
+.task-component {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+
+
+    .task-input-fields {
+        display: block;
+        width: 95%;
+        margin-top: 1rem;
+        padding: .5rem;
+        font-size: 1.1rem;
+        outline: none;
+
+    }
+    .create-task-button {
+        margin-top: 1rem;
+        width: 100%;
+        padding: .5rem;
+        cursor: pointer;
+        background: linear-gradient(to left, white 50%, lightblue 50%) right;
+        background-size: 200%;
+        transition: .4s;
+        border: 1px solid black;
+        font-size: 1.1rem;
+    }
+    .create-task-button:hover{
+        background-position: left;
+    }
+}
+
+
+

@@ -1,0 +1,36 @@
+.employee-main-class {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+
+    .input-fields{
+        display: block;
+        width: 95%;
+        margin-top: 1rem;
+        padding: .5rem;
+        font-size: 1.1rem;
+        outline: none;
+    }
+    .operation-button {
+        margin-top: 1rem;
+        width: 100%;
+        padding: .5rem;
+        cursor: pointer;
+        background: linear-gradient(to left, white 50%, skyblue 50%) right;
+        background-size: 200%;
+        transition: .4s;
+        font-size: 1.1rem;
+        border: 1px solid black;
+    }
+    .operation-button:hover{
+        background-position: left;
+    }
+    .operation-button:active {
+        transform: scale(.90);
+    }
+}

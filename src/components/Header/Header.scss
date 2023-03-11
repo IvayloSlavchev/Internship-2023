@@ -1,0 +1,29 @@
+.header-main-component {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: skyblue;
+    border-bottom: 1px solid black;
+
+    .title a {
+        font-size: 1.7rem;
+        position: relative;
+        left: -3rem;
+        text-decoration: none;
+        color: black;
+    }
+
+    .category {
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+        margin-top: auto;
+        margin-bottom: auto;
+
+    }
+    .category a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,18 @@
+.user-profile {
+    text-align: center;
+
+    .logout-button{
+        width: 20%;
+        padding: .5rem;
+        font-size: 17px;
+        border: 1px solid black;
+        background: linear-gradient(to left, white 50%, skyblue 50%) right;
+        background-size: 200%;
+        transition: .4s;
+        cursor:  pointer;
+
+    }
+    .logout-button:hover{
+        background-position: left;
+    }
+}

@@ -1,0 +1,54 @@
+.employees-main-page {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    .employee-left-image {
+        width: 40%;
+        margin-top: 3rem;
+        text-align: center;
+        
+    }
+    .employee-left-image p {
+        letter-spacing: 1px;
+    }
+
+    .operation-buttons{
+        margin-bottom: auto;
+        text-align: center;
+        width: 30%;
+        margin-top: 3rem;
+
+        .employee-operation-button {
+            display: block;
+            margin-top: 3rem;
+            text-decoration: none;
+            color: black;
+            font-size: 1.4rem;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 100%;
+            
+            background: linear-gradient(to left, white 50%, lightblue 50%) right;
+            transition: .4s;
+            background-size: 200%;
+
+            border-radius: .5rem;
+        }
+        .employee-operation-button:hover {
+            color: white;
+            background-position: left;
+        }
+    }
+}
+
+
+/* Styles for mobile/tablet version */
+
+.mobile-view {
+    display: block;
+    
+    .employee-left-image  {
+        text-align: center;
+    }
+}

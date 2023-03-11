@@ -1,0 +1,37 @@
+.authentication-component {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    padding: 1rem;
+
+    .authentication-input {
+        display: block;
+        width: 95%;
+        margin-top: .5rem;
+        outline: none;
+        padding: .5rem;
+        font-size: 17px;
+    }
+    .authentication-label {
+        position: relative;
+        top: .4rem;
+        
+    }
+    .submit-button {
+        width: 100%;
+        padding: .5rem;
+        font-size: 1rem;
+        background: linear-gradient(to left, white 50%, lightblue 50%) right;
+        background-size: 200%;
+        transition: .4s;
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+    } 
+    .submit-button:hover {
+        background-position: left;
+    }
+}
