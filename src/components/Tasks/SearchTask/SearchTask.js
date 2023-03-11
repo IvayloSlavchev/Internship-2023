@@ -53,7 +53,6 @@ const SearchTask = () => {
                    {
                         tasks.map((item, index) => {
                            if (item) {
-
                                return <tr key={index} className='fetched-data'>
                                    { !taskIdVisible ? <td /> : <td className='table-data'>{item.id}</td> }
                                    <td className='table-data'>{item.taskTitle}</td>
