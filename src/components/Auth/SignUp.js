@@ -31,7 +31,7 @@ const SignUp = () => {
 
     return (
         <div className='authentication-component'>
-            <h2 style={{textAlign: "center"}}>Sign in to your account</h2>
+            <h2 style={{textAlign: "center"}}>Create new account</h2>
             { isErrorOccured ? <p>{errorMessage}</p> : null }
             <form>
                 <label htmlFor="email" className='authentication-label'>Email</label>
